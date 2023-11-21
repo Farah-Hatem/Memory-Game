@@ -24,6 +24,7 @@ body {
     display: none;
     text-align: center;
     align-items: center;
+    padding-top: 200px;
 }
 .over span {
     background-color: white;
