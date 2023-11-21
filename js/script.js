@@ -3,6 +3,7 @@ let blocksContainer = document.querySelector(".game");
 let blocks = Array.from(blocksContainer.children);
 // let orderRange = [...Array(blocks.length).keys()];
 let orderRange = Array.from(Array(blocks.length).keys());
+let over = document.getElementById('over');
 shuffle(orderRange);
 
 
@@ -35,6 +36,9 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
 
         firstBlock.classList.add('has-match');
         secondBlock.classList.add('has-match');
+        if (document.querySelectorAll('.has-match').length == blocks.length) {
+            over.style.display = "block";
+        };
     }
     else {
        setTimeout(() => {
